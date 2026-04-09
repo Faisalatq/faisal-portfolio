@@ -10,7 +10,14 @@ const competencies = [
 ];
 
 const ResumeSection = () => (
-  <section id="resume" className="section-padding bg-surface-dark text-surface-dark-foreground">
+  <section id="resume" className="relative section-padding bg-surface-dark text-surface-dark-foreground overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none">
+      <svg className="absolute top-0 left-0 w-full h-full opacity-[0.06]" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
+        <path d="M0 300C200 200 400 400 600 300C800 200 1000 400 1200 300C1320 250 1400 350 1440 300" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" />
+        <path d="M0 350C240 250 480 450 720 350C960 250 1200 450 1440 350" stroke="hsl(var(--green-glow))" strokeWidth="0.5" fill="none" />
+      </svg>
+      <div className="absolute -top-20 right-1/3 w-[400px] h-[400px] rounded-full bg-primary/[0.06] blur-[100px]" />
+    </div>
     <div className="max-w-7xl mx-auto text-center">
       <ScrollReveal>
         <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Resume</p>
