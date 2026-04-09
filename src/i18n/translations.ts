@@ -13,7 +13,7 @@ export const translations = {
       headline: "Hi, I'm",
       name: "Faisal",
       subheadline:
-        "A Computer Science professional leveraging technical expertise for consulting, complex problem-solving, and strategic project management.",
+        "Computer Science graduate who turns complex challenges into strategic wins — leading teams, driving high-impact initiatives, and building solutions that move the needle.",
       cta1: "View My Work",
       cta2: "Download CV",
     },
@@ -107,7 +107,7 @@ export const translations = {
       headline: "أهلاً، أنا",
       name: "فيصل",
       subheadline:
-        "متخصص في علوم الحاسب، أُوظّف خبرتي التقنية في الاستشارات، حل المشكلات المعقدة، وإدارة المشاريع الاستراتيجية.",
+        "خريج علوم حاسب يحوّل التحديات المعقدة إلى إنجازات استراتيجية — أقود الفرق، وأطلق مبادرات عالية الأثر، وأبني حلولاً تصنع الفارق.",
       cta1: "تصفح أعمالي",
       cta2: "تحميل السيرة الذاتية",
     },
