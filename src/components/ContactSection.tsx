@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Linkedin, Github, Twitter } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -16,14 +17,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="relative section-padding overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="absolute -top-10 -right-32 w-[500px] h-[500px] opacity-[0.04]" viewBox="0 0 500 500" fill="none">
-          <circle cx="250" cy="250" r="220" stroke="hsl(var(--primary))" strokeWidth="1" />
-          <circle cx="250" cy="250" r="160" stroke="hsl(var(--green-glow))" strokeWidth="0.75" />
-          <circle cx="250" cy="250" r="100" stroke="hsl(var(--primary))" strokeWidth="0.5" />
-        </svg>
-        <div className="absolute bottom-0 left-1/4 w-[350px] h-[350px] rounded-full bg-primary/[0.03] blur-[80px]" />
-      </div>
+      <AnimatedBackground variant="contact" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
