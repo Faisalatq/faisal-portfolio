@@ -22,7 +22,21 @@ const experiences = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="section-padding">
+  <section id="experience" className="relative section-padding overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none">
+      <svg className="absolute top-10 right-0 w-full h-[300px] opacity-[0.03]" viewBox="0 0 1440 300" fill="none" preserveAspectRatio="none">
+        <path d="M0 150C360 50 720 250 1080 150C1260 100 1380 180 1440 150V300H0Z" fill="hsl(var(--primary))" />
+      </svg>
+      <svg className="absolute -bottom-10 -left-20 w-[400px] h-[400px] opacity-[0.05]" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="180" stroke="hsl(var(--green-glow))" strokeWidth="1" />
+        <circle cx="200" cy="200" r="120" stroke="hsl(var(--primary))" strokeWidth="0.75" />
+      </svg>
+      <div className="absolute top-1/3 right-10 grid grid-cols-4 gap-3 opacity-[0.06]">
+        {Array.from({ length: 16 }).map((_, i) => (
+          <div key={i} className="w-1 h-1 rounded-full bg-primary" />
+        ))}
+      </div>
+    </div>
     <div className="max-w-7xl mx-auto">
       <ScrollReveal>
         <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Experience</p>
