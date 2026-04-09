@@ -6,9 +6,11 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import GlobalBackground from "@/components/GlobalBackground";
 
 const Index = () => (
   <>
+    <GlobalBackground />
     <Header />
     <HeroSection />
     <AboutSection />

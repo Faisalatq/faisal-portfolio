@@ -1,7 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import AnimatedBackground from "./AnimatedBackground";
 
 const colors = [
   "from-primary/20 to-green-glow/10",
@@ -13,9 +12,7 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="relative section-padding bg-card overflow-hidden">
-      <AnimatedBackground variant="projects" />
-
+    <section id="projects" className="relative section-padding overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.projects.badge}</p>
@@ -25,7 +22,7 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.projects.items.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.12}>
-              <div className="group relative bg-background rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="group relative bg-background/60 backdrop-blur-sm rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className={`h-48 bg-gradient-to-br ${colors[i]} flex items-center justify-center`}>
                   <span className="text-4xl font-bold text-foreground/10 group-hover:text-foreground/20 transition-colors select-none">
                     {p.title.charAt(0)}

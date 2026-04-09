@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Linkedin, Github, Twitter } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import AnimatedBackground from "./AnimatedBackground";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -17,8 +16,6 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="relative section-padding overflow-hidden">
-      <AnimatedBackground variant="contact" />
-
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           <ScrollReveal>
@@ -52,7 +49,7 @@ const ContactSection = () => {
           <ScrollReveal delay={0.15}>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="space-y-5 bg-card p-8 md:p-10 rounded-2xl border border-border"
+              className="space-y-5 bg-background/60 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-border"
             >
               <div className="grid sm:grid-cols-2 gap-5">
                 <Input name="name" placeholder={t.contact.form.name} value={form.name} onChange={handleChange} className="bg-background" />
