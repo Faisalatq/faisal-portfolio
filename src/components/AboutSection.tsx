@@ -15,7 +15,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.about.badge}</p>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 whitespace-pre-line">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 whitespace-pre-line my-px">
             {t.about.title}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed mb-16">
