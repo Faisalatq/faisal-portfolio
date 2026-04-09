@@ -14,7 +14,7 @@ const ResumeSection = () => {
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.resume.badge}</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">{t.resume.title}</h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
+          <p className="text-surface-dark-foreground/60 text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
