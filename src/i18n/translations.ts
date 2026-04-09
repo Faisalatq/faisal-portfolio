@@ -13,14 +13,14 @@ export const translations = {
       headline: "Hi, I'm",
       name: "Faisal",
       subheadline:
-        "Computer Science graduate who turns complex challenges into strategic wins — leading teams, driving high-impact initiatives, and building solutions that move the needle.",
+        "Transforming complex challenges into strategic wins through strong leadership, problem-solving, and impactful project management.",
       cta1: "View My Work",
       cta2: "Download CV",
     },
     about: {
       badge: "About Me",
       title: "Building the future,\none project at a time.",
-      desc: "I'm a Computer Science graduate with a passion for leading teams, driving negotiations, and managing large-scale initiatives. I thrive at the intersection of technology and strategy — turning ideas into impactful solutions.",
+      desc: "Computer Science student with a strong interest in consulting and project management. Recognized for analytical thinking, structured problem-solving, and leading teams of 40+ members. Contributed over 100 volunteer hours, demonstrating commitment, initiative, and impact-driven execution. Passionate about turning complex challenges into practical, scalable solutions.",
       skills: [
         { title: "Team Leadership", desc: "Leading cross-functional teams to deliver ambitious projects on time and within scope." },
         { title: "Strategic Planning", desc: "Translating complex requirements into actionable roadmaps and measurable outcomes." },
