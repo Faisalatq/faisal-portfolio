@@ -93,6 +93,12 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+  html.ar body {
+    font-family: 'Cairo', sans-serif;
+  }
+  html.ar h1, html.ar h2, html.ar h3, html.ar h4, html.ar h5, html.ar h6 {
+    font-family: 'Cairo', sans-serif;
+  }
 }
 
 @layer utilities {
