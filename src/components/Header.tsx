@@ -50,7 +50,7 @@ const Header = () => {
           ))}
           <button
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border hover:border-primary hover:text-primary transition-colors duration-200"
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border hover:border-primary transition-colors duration-200 bg-primary text-primary-foreground"
           >
             {lang === "en" ? "عربي" : "EN"}
           </button>
