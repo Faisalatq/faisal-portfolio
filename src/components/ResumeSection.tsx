@@ -9,12 +9,12 @@ const ResumeSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="resume" className="relative section-padding overflow-hidden bg-surface-dark text-surface-dark-foreground">
+    <section id="resume" className="relative section-padding overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.resume.badge}</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">{t.resume.title}</h2>
-          <p className="text-surface-dark-foreground/60 text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
