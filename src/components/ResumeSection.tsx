@@ -2,7 +2,6 @@ import ScrollReveal from "./ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Download, Code, Briefcase, GraduationCap, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import AnimatedBackground from "./AnimatedBackground";
 
 const icons = [Code, Briefcase, GraduationCap, Globe];
 
@@ -10,14 +9,12 @@ const ResumeSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="resume" className="relative section-padding bg-surface-dark text-surface-dark-foreground overflow-hidden">
-      <AnimatedBackground variant="resume" />
-
+    <section id="resume" className="relative section-padding overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.resume.badge}</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">{t.resume.title}</h2>
-          <p className="text-surface-dark-foreground/60 text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-12">{t.resume.desc}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
@@ -25,7 +22,7 @@ const ResumeSection = () => {
             {t.resume.competencies.map((label, i) => {
               const Icon = icons[i];
               return (
-                <div key={i} className="flex items-center gap-3 px-6 py-3 rounded-full border border-surface-dark-foreground/15 bg-surface-dark-foreground/5">
+                <div key={i} className="flex items-center gap-3 px-6 py-3 rounded-full border border-border bg-background/60 backdrop-blur-sm">
                   <Icon size={18} className="text-primary" />
                   <span className="text-sm font-medium">{label}</span>
                 </div>
