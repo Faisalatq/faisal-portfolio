@@ -3,9 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Download } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import AnimatedBackground from "./AnimatedBackground";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const HeroSection = () => {
   const { t } = useLanguage();
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    smoothScrollTo(id);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center section-padding pt-32 overflow-hidden">
@@ -30,13 +36,13 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="hero" size="lg" asChild>
-              <a href="#projects">
+              <a href="#projects" onClick={(e) => handleScroll(e, "projects")}>
                 <ArrowDown size={18} />
                 {t.hero.cta1}
               </a>
             </Button>
             <Button variant="hero-outline" size="lg" asChild>
-              <a href="#resume">
+              <a href="#resume" onClick={(e) => handleScroll(e, "resume")}>
                 <Download size={18} />
                 {t.hero.cta2}
               </a>

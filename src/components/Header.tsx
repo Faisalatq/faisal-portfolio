@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -14,10 +15,24 @@ const Header = () => {
     { label: t.nav.contact, href: "#contact" },
   ];
 
+  const handleNav = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    if (id) {
+      smoothScrollTo(id);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-2xl font-bold text-foreground tracking-tight font-sans">
+        <a
+          href="#"
+          onClick={(e) => handleNav(e, "#")}
+          className="text-2xl font-bold text-foreground tracking-tight font-sans"
+        >
           فيصل
         </a>
 
@@ -27,6 +42,7 @@ const Header = () => {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => handleNav(e, item.href)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {item.label}
@@ -68,7 +84,7 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => { handleNav(e, item.href); setOpen(false); }}
                   className="text-base font-medium text-foreground"
                 >
                   {item.label}
