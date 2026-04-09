@@ -129,8 +129,9 @@ const HeroBg = () => (
 /* ── About ── */
 const AboutBg = () => (
   <>
+    {/* Concentric organic shapes */}
     <motion.svg
-      className="absolute -top-20 -left-40 w-[600px] h-[600px] opacity-[0.05]"
+      className="absolute -top-20 -left-40 w-[600px] h-[600px] opacity-[0.06]"
       viewBox="0 0 600 600"
       fill="none"
       animate={{ rotate: [0, -6, 0] }}
@@ -139,10 +140,47 @@ const AboutBg = () => (
       <path d="M300 50Q500 150 500 300Q500 500 300 550Q100 500 100 300Q100 150 300 50Z" stroke="hsl(var(--primary))" strokeWidth="1.5" />
       <path d="M300 100Q450 180 450 300Q450 450 300 500Q150 450 150 300Q150 180 300 100Z" stroke="hsl(var(--green-glow))" strokeWidth="1" />
     </motion.svg>
+
+    {/* Circle cluster — top right */}
+    <motion.svg
+      className="absolute -top-16 -right-32 w-[700px] h-[700px] opacity-[0.08]"
+      viewBox="0 0 700 700"
+      fill="none"
+      animate={{ rotate: [0, 8, 0], scale: [1, 1.03, 1] }}
+      transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <circle cx="400" cy="300" r="300" stroke="hsl(var(--primary))" strokeWidth="1.5" opacity="0.5" />
+      <circle cx="400" cy="300" r="220" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.35" />
+      <circle cx="400" cy="300" r="140" stroke="hsl(var(--green-glow))" strokeWidth="1" opacity="0.45" />
+    </motion.svg>
+
+    {/* Wave */}
+    <svg className="absolute bottom-0 left-0 w-full h-[300px] opacity-[0.04]" viewBox="0 0 1440 300" fill="none" preserveAspectRatio="none">
+      <path d="M0 200C240 100 480 300 720 200C960 100 1200 300 1440 200V300H0Z" fill="hsl(var(--primary))" />
+      <path d="M0 240C200 160 400 320 600 240C800 160 1000 320 1200 240C1350 180 1420 260 1440 240V300H0Z" fill="hsl(var(--green-glow))" />
+    </svg>
+
+    {/* Dot grid — bottom left */}
     <motion.div
-      className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full bg-primary/[0.03] blur-[80px]"
+      className="absolute bottom-16 left-10 grid grid-cols-4 gap-3 opacity-[0.07]"
+      animate={{ opacity: [0.07, 0.03, 0.07] }}
+      transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+    >
+      {Array.from({ length: 16 }).map((_, i) => (
+        <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary" />
+      ))}
+    </motion.div>
+
+    {/* Blur glows */}
+    <motion.div
+      className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full bg-primary/[0.04] blur-[100px]"
       animate={{ x: [0, 15, 0], y: [0, -10, 0] }}
       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+    />
+    <motion.div
+      className="absolute top-20 left-1/3 w-[300px] h-[300px] rounded-full bg-[hsl(var(--green-glow))]/[0.03] blur-[90px]"
+      animate={{ scale: [1, 1.15, 1], x: [0, -12, 0] }}
+      transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
     />
   </>
 );
