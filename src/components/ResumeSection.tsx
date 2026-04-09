@@ -22,7 +22,7 @@ const ResumeSection = () => {
             {t.resume.competencies.map((label, i) => {
               const Icon = icons[i];
               return (
-                <div key={i} className="flex items-center gap-3 px-6 py-3 rounded-full border border-surface-dark-foreground/15 bg-surface-dark-foreground/5">
+                <div key={i} className="flex items-center gap-3 px-6 py-3 rounded-full border border-border bg-background/60 backdrop-blur-sm">
                   <Icon size={18} className="text-primary" />
                   <span className="text-sm font-medium">{label}</span>
                 </div>
