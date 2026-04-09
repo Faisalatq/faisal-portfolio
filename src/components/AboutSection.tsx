@@ -1,6 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { Users, Target, Lightbulb } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 
 const icons = [Users, Target, Lightbulb];
 
@@ -8,7 +9,9 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="relative section-padding overflow-hidden">
+    <section id="about" className="relative section-padding bg-card overflow-hidden">
+      <AnimatedBackground variant="about" />
+
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.about.badge}</p>
@@ -25,7 +28,7 @@ const AboutSection = () => {
             const Icon = icons[i];
             return (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="group p-8 rounded-2xl bg-background/60 backdrop-blur-sm border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+                <div className="group p-8 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                     <Icon className="text-primary" size={24} />
                   </div>

@@ -1,11 +1,14 @@
 import ScrollReveal from "./ScrollReveal";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 
 const ExperienceSection = () => {
   const { t, isRtl } = useLanguage();
 
   return (
     <section id="experience" className="relative section-padding overflow-hidden">
+      <AnimatedBackground variant="experience" />
+
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.experience.badge}</p>

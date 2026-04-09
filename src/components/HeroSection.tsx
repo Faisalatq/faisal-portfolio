@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 import CVIcon from "./CVIcon";
 import { smoothScrollTo } from "@/lib/smoothScroll";
 
@@ -15,8 +16,11 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center section-padding pt-32 overflow-hidden">
+      <AnimatedBackground variant="hero" />
+
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          {/* Text block */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,6 +52,7 @@ const HeroSection = () => {
               </Button>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
