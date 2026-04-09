@@ -1,71 +1,60 @@
-import { motion } from "framer-motion";
-
 /**
- * A single, fixed full-page background layer with soft organic blobs.
- * Sits behind every section so transitions feel seamless.
+ * Continuous undulating wave pattern across the entire site.
+ * Fixed layer at z-index -10, very low opacity for elegance.
  */
 const GlobalBackground = () => (
   <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-    {/* ── Large warm base wash ── */}
+    {/* Base background color */}
     <div className="absolute inset-0 bg-background" />
 
-    {/* ── Blob 1 — top-right, soft green ── */}
-    <motion.div
-      className="absolute -top-[15%] -right-[10%] w-[55vw] h-[55vw] max-w-[900px] max-h-[900px] rounded-full bg-[hsl(var(--green-glow))] opacity-[0.045] blur-[160px]"
-      animate={{
-        x: [0, 30, 0],
-        y: [0, 20, 0],
-        scale: [1, 1.08, 1],
-      }}
-      transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-    />
+    {/* Continuous SVG wave pattern */}
+    <svg
+      className="absolute inset-0 w-full h-full opacity-[0.06]"
+      preserveAspectRatio="none"
+      viewBox="0 0 1440 4000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Wave layer 1 — wide undulation */}
+      <path
+        d="M0 200 C360 100, 720 350, 1440 200 C1440 200, 1440 600, 1440 600 C720 750, 360 500, 0 600 Z"
+        fill="hsl(var(--primary))"
+        opacity="0.5"
+      />
+      <path
+        d="M0 700 C480 550, 960 900, 1440 700 C1440 700, 1440 1100, 1440 1100 C960 1300, 480 950, 0 1100 Z"
+        fill="hsl(var(--surface-warm))"
+        opacity="0.6"
+      />
+      <path
+        d="M0 1200 C300 1050, 600 1350, 900 1200 C1200 1050, 1440 1350, 1440 1200 L1440 1600 C1440 1750, 1200 1450, 900 1600 C600 1750, 300 1450, 0 1600 Z"
+        fill="hsl(var(--green-glow))"
+        opacity="0.35"
+      />
+      <path
+        d="M0 1700 C360 1550, 720 1850, 1080 1700 C1260 1625, 1440 1750, 1440 1700 L1440 2100 C1440 2250, 1080 2000, 720 2100 C360 2200, 0 1950, 0 2100 Z"
+        fill="hsl(var(--primary))"
+        opacity="0.4"
+      />
+      <path
+        d="M0 2200 C480 2050, 960 2400, 1440 2200 L1440 2600 C960 2800, 480 2450, 0 2600 Z"
+        fill="hsl(var(--surface-warm))"
+        opacity="0.5"
+      />
+      <path
+        d="M0 2700 C300 2550, 900 2900, 1440 2700 L1440 3100 C900 3300, 300 2950, 0 3100 Z"
+        fill="hsl(var(--green-glow))"
+        opacity="0.3"
+      />
+      <path
+        d="M0 3200 C600 3050, 1000 3400, 1440 3200 L1440 3600 C1000 3800, 600 3450, 0 3600 Z"
+        fill="hsl(var(--primary))"
+        opacity="0.35"
+      />
+    </svg>
 
-    {/* ── Blob 2 — center-left, primary green ── */}
-    <motion.div
-      className="absolute top-[25%] -left-[8%] w-[45vw] h-[45vw] max-w-[750px] max-h-[750px] rounded-full bg-primary opacity-[0.035] blur-[140px]"
-      animate={{
-        x: [0, -20, 0],
-        y: [0, 30, 0],
-        scale: [1, 1.06, 1],
-      }}
-      transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-    />
-
-    {/* ── Blob 3 — middle-right, warm beige ── */}
-    <motion.div
-      className="absolute top-[45%] right-[5%] w-[40vw] h-[40vw] max-w-[650px] max-h-[650px] rounded-full bg-[hsl(var(--surface-warm))] opacity-[0.06] blur-[130px]"
-      animate={{
-        x: [0, 15, 0],
-        y: [0, -25, 0],
-        scale: [1, 1.1, 1],
-      }}
-      transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-    />
-
-    {/* ── Blob 4 — lower-left, faint green glow ── */}
-    <motion.div
-      className="absolute top-[65%] -left-[5%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] rounded-full bg-[hsl(var(--green-glow))] opacity-[0.03] blur-[150px]"
-      animate={{
-        x: [0, 25, 0],
-        y: [0, -15, 0],
-        scale: [1, 1.05, 1],
-      }}
-      transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 6 }}
-    />
-
-    {/* ── Blob 5 — bottom-right, primary ── */}
-    <motion.div
-      className="absolute top-[80%] right-[10%] w-[35vw] h-[35vw] max-w-[600px] max-h-[600px] rounded-full bg-primary opacity-[0.04] blur-[120px]"
-      animate={{
-        x: [0, -18, 0],
-        y: [0, 20, 0],
-        scale: [1, 1.07, 1],
-      }}
-      transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 8 }}
-    />
-
-    {/* ── Very subtle noise-like texture overlay ── */}
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background/50" />
+    {/* Soft gradient overlay for depth */}
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/40" />
   </div>
 );
 
