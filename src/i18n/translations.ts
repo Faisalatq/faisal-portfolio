@@ -13,7 +13,7 @@ export const translations = {
       headline: "Hi, I'm",
       name: "Faisal",
       subheadline:
-        "A Computer Science professional leveraging technical expertise for consulting, complex problem-solving, and strategic project management.",
+        "Transforming complex challenges into strategic wins through strong leadership, problem-solving, and impactful project management.",
       cta1: "View My Work",
       cta2: "Download CV",
     },
@@ -26,7 +26,6 @@ export const translations = {
         { title: "Strategic Planning", desc: "Translating complex requirements into actionable roadmaps and measurable outcomes." },
         { title: "Problem Solving", desc: "Applying analytical thinking and technical expertise to overcome challenging obstacles." },
       ],
-      cvButton: "Download CV",
     },
     experience: {
       badge: "Experience",
@@ -115,13 +114,12 @@ export const translations = {
     about: {
       badge: "عني",
       title: "أبني المستقبل،\nمشروعاً تلو الآخر.",
-      desc: "طالب علوم حاسب ذو اهتمام كبير بالاستشارات وإدارة المشاريع. أتميز بالتفكير التحليلي، والمنهجية في حل المشكلات، إلى جانب خبرتي في قيادة فرق عمل تضم أكثر من 40 عضواً. قدمت أكثر من 100 ساعة تطوعية تعكس مستوى الالتزام، وروح المبادرة، والتنفيذ الموجه نحو إحداث أثر ملموس. شغوف بتحويل التحديات المعقدة إلى حلول عملية وقابلة للتوسع.",
+      desc: "طالب علوم حاسب ذو اهتمام كبير بمجال الاستشارات وإدارة المشاريع. أتميز بالتفكير التحليلي، والمنهجية في حل المشكلات، إلى جانب خبرتي في قيادة فرق عمل تضم أكثر من 40 عضواً. عملت أكثر من 100 ساعة تطوعية تعكس مستوى الالتزام، وروح المبادرة. شغوف بتحويل التحديات المعقدة إلى حلول عملية.",
       skills: [
         { title: "قيادة الفريق", desc: "قيادة فرق متعددة التخصصات لتنفيذ مشاريع طموحة في الوقت المحدد وضمن النطاق." },
         { title: "التخطيط الاستراتيجي", desc: "تحويل المتطلبات المعقدة إلى خطط عمل واضحة ونتائج قابلة للقياس." },
         { title: "حل المشكلات", desc: "تطبيق التفكير التحليلي والخبرة التقنية لتجاوز العقبات الصعبة." },
       ],
-      cvButton: "تحميل السيرة الذاتية",
     },
     experience: {
       badge: "الخبرات",
