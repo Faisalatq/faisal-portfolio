@@ -9,7 +9,7 @@ const ResumeSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="resume" className="relative section-padding overflow-hidden">
+    <section id="resume" className="relative section-padding overflow-hidden bg-surface-dark text-surface-dark-foreground">
       <div className="max-w-7xl mx-auto text-center">
         <ScrollReveal>
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.resume.badge}</p>
