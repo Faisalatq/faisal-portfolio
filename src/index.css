@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Cairo:wght@200..1000&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -92,6 +92,12 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+  html.ar body {
+    font-family: 'Cairo', sans-serif;
+  }
+  html.ar h1, html.ar h2, html.ar h3, html.ar h4, html.ar h5, html.ar h6 {
+    font-family: 'Cairo', sans-serif;
   }
 }
 
