@@ -53,24 +53,6 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Headshot placeholder */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="flex-shrink-0 hidden lg:block"
-          >
-            <div className="w-72 h-80 rounded-2xl bg-muted/60 border border-border/60 flex items-center justify-center overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-muted/80" />
-              <div className="text-muted-foreground/40 flex flex-col items-center gap-2">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M20 21a8 8 0 0 0-16 0" />
-                </svg>
-                <span className="text-xs font-medium tracking-wide uppercase">Photo</span>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
