@@ -1,6 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { Users, Target, Lightbulb } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 
 const icons = [Users, Target, Lightbulb];
 
@@ -9,13 +10,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="relative section-padding bg-card overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="absolute -top-20 -left-40 w-[600px] h-[600px] opacity-[0.04]" viewBox="0 0 600 600" fill="none">
-          <path d="M300 50Q500 150 500 300Q500 500 300 550Q100 500 100 300Q100 150 300 50Z" stroke="hsl(var(--primary))" strokeWidth="1.5" />
-          <path d="M300 100Q450 180 450 300Q450 450 300 500Q150 450 150 300Q150 180 300 100Z" stroke="hsl(var(--green-glow))" strokeWidth="1" />
-        </svg>
-        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full bg-primary/[0.03] blur-[80px]" />
-      </div>
+      <AnimatedBackground variant="about" />
 
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>

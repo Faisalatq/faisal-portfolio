@@ -1,6 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import AnimatedBackground from "./AnimatedBackground";
 
 const colors = [
   "from-primary/20 to-green-glow/10",
@@ -13,16 +14,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="relative section-padding bg-card overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <svg className="absolute -top-16 right-1/4 w-[500px] h-[500px] opacity-[0.04]" viewBox="0 0 500 500" fill="none">
-          <rect x="50" y="50" width="400" height="400" rx="80" stroke="hsl(var(--primary))" strokeWidth="1" />
-          <rect x="100" y="100" width="300" height="300" rx="60" stroke="hsl(var(--green-glow))" strokeWidth="0.75" />
-        </svg>
-        <div className="absolute bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-green-glow/[0.03] blur-[90px]" />
-        <svg className="absolute bottom-0 left-0 w-full h-[200px] opacity-[0.03]" viewBox="0 0 1440 200" fill="none" preserveAspectRatio="none">
-          <path d="M0 100C480 0 960 200 1440 100V200H0Z" fill="hsl(var(--primary))" />
-        </svg>
-      </div>
+      <AnimatedBackground variant="projects" />
 
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
